@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product – Geeta Stationery</title>
+  <link rel="icon" href="../images/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .related-section { background: var(--off-white); padding: 60px 0; }
+    .tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 28px; }
+    .tab-btn { padding: 14px 28px; background: none; border: none; font-family: 'DM Sans'; font-size: 0.95rem; font-weight: 600; color: var(--text-light); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s; }
+    .tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); }
+    .tab-content { display: none; padding: 24px 0; color: var(--text); line-height: 1.8; font-size: 0.95rem; }
+    .tab-content.active { display: block; }
+    .review-item { background: var(--off-white); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+    .review-item .stars { color: var(--gold); margin-bottom: 8px; }
+    .review-item strong { display: block; font-size: 0.88rem; margin-top: 8px; color: var(--text-light); }
+    .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: var(--text-light); }
+    .breadcrumb a { color: var(--navy); }
+    .breadcrumb span { margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Geeta Stationery"/></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+      <a href="shop.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search products..." id="searchInput"/>
+    <button onclick="doSearch()"><i class="fas fa-search"></i></button>
+  </div>
+</header>
+
+<div style="margin-top:72px;">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="shop.html">Shop</a><span>/</span>
+      <span id="breadProduct">Product</span>
+    </div>
+  </div>
+
+  <section class="product-detail-section">
+    <div class="container">
+      <div class="product-detail-grid" id="productDetail">
+        <div style="text-align:center;padding:80px;color:var(--text-light);">Loading product...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <div class="container" style="padding-bottom:60px;">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('description', this)">Description</button>
+      <button class="tab-btn" onclick="switchTab('reviews', this)">Reviews</button>
+      <button class="tab-btn" onclick="switchTab('delivery', this)">Delivery & Returns</button>
+    </div>
+    <div id="description" class="tab-content active">
+      <p id="tabDescription">Loading...</p>
+    </div>
+    <div id="reviews" class="tab-content">
+      <div class="review-item">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent quality! Really happy with this purchase."</p>
+        <strong>— Priya Sharma</strong>
+      </div>
+      <div class="review-item">
+        <div class="stars">★★★★☆</div>
+        <p>"Good product, fast delivery. Will buy again!"</p>
+        <strong>— Rahul Meena</strong>
+      </div>
+      <div class="review-item">
+        <div class="stars">★★★★★</div>
+        <p>"Best price in Jodhpur. Highly recommended."</p>
+        <strong>— Sunita Patel</strong>
+      </div>
+    </div>
+    <div id="delivery" class="tab-content">
+      <p><strong>Free Delivery:</strong> Free home delivery on orders above ₹500 in Jodhpur.</p>
+      <br/>
+      <p><strong>Standard Delivery:</strong> ₹40 for orders below ₹500 within Jodhpur.</p>
+      <br/>
+      <p><strong>Return Policy:</strong> Items can be returned within 7 days if unused and in original packaging.</p>
+      <br/>
+      <p><strong>Order on WhatsApp:</strong> <a href="https://wa.me/919999999999" style="color:var(--navy);font-weight:600;">Click here to order via WhatsApp</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED PRODUCTS -->
+<section class="related-section">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-tag">You May Also Like</p>
+      <h2>Related Products</h2>
+    </div>
+    <div class="products-grid" id="relatedProducts"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/logo.png" alt="Geeta Stationery" class="footer-logo"/>
+        <p>Jodhpur's most trusted stationery store.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/919999999999"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Categories</h4><a href="shop.html?cat=books">School Books</a><a href="shop.html?cat=notebooks">Notebooks</a><a href="shop.html?cat=art">Art Supplies</a></div>
+      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p><p><i class="fas fa-phone"></i> +91 99999 99999</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="../js/products.js"></script>
+<script src="../js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  const product = PRODUCTS.find(p => p.id === id);
+  if (!product) {
+    document.getElementById('productDetail').innerHTML = '<p style="text-align:center;padding:80px;color:#6B7280;">Product not found. <a href="shop.html">Back to Shop</a></p>';
+    return;
+  }
+  document.title = `${product.name} – Geeta Stationery`;
+  document.getElementById('breadProduct').textContent = product.name;
+  document.getElementById('tabDescription').textContent = product.description;
+
+  const discount = product.oldPrice ? Math.round((1 - product.price/product.oldPrice)*100) : 0;
+  let thumbsHTML = (product.images || [product.image]).map((img, i) => `<div class="thumb ${i===0?'active':''}" onclick="switchMainImg(this,'${img}')"><img src="${img}" alt="${product.name}"/></div>`).join('');
+
+  document.getElementById('productDetail').innerHTML = `
+    <div class="product-gallery">
+      <div class="main-img"><img src="${product.images?.[0] || product.image}" alt="${product.name}" id="mainImg"/></div>
+      <div class="thumb-row">${thumbsHTML}</div>
+    </div>
+    <div class="product-detail-info">
+      ${product.badge ? `<span class="product-badge" style="position:static;display:inline-block;margin-bottom:12px;">${product.badge}</span>` : ''}
+      <h1>${product.name}</h1>
+      <div class="rating-row">
+        <span class="stars">${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5-Math.floor(product.rating))}</span>
+        <span>${product.rating} (${product.reviews} reviews)</span>
+      </div>
+      <div class="detail-price">
+        ₹${product.price}
+        ${product.oldPrice ? `<span class="old">₹${product.oldPrice}</span>` : ''}
+        ${discount ? `<span style="background:var(--gold);color:var(--navy);font-size:0.75rem;padding:4px 10px;border-radius:50px;margin-left:10px;">${discount}% OFF</span>` : ''}
+      </div>
+      <p style="color:var(--text-light);line-height:1.7;margin-bottom:16px;">${product.description}</p>
+      <div class="qty-row">
+        <span style="font-weight:600;font-size:0.9rem;">Quantity:</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="qty-num" id="qtyNum">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+      <div class="detail-btns">
+        <button class="btn-add-cart" onclick="addToCart(${product.id})"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+        <button class="btn-whatsapp-order" onclick="window.open('https://wa.me/919999999999?text=Hi! I want to order: ${encodeURIComponent(product.name)} (₹${product.price})','_blank')">
+          <i class="fab fa-whatsapp"></i> Order on WhatsApp
+        </button>
+      </div>
+      <div class="detail-meta">
+        <p><strong>Availability:</strong> <span style="color:green;">✓ ${product.availability}</span></p>
+        <p><strong>SKU:</strong> ${product.sku}</p>
+        <p><strong>Category:</strong> ${getCategoryLabel(product.category)}</p>
+      </div>
+    </div>
+  `;
+
+  // Related products
+  const related = PRODUCTS.filter(p => p.category === product.category && p.id !== id).slice(0, 4);
+  document.getElementById('relatedProducts').innerHTML = related.map(renderProductCard).join('');
+});
+
+function switchMainImg(thumbEl, src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumbEl.classList.add('active');
+}
+
+let qty = 1;
+function changeQty(delta) {
+  qty = Math.max(1, qty + delta);
+  document.getElementById('qtyNum').textContent = qty;
+}
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
