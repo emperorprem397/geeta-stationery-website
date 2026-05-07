@@ -1,52 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop – Geeta Stationery Jodhpur</title>
-  <meta name="description" content="Shop all stationery, school books, notebooks, art supplies and office products at Geeta Stationery, Jodhpur."/>
-  <link rel="icon" href="../images/logo.png" type="image/png"/>
+  <link rel="icon" href="../images/logo-new.png" type="image/png"/>
   <link rel="stylesheet" href="../css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-
-<!-- NAVBAR -->
 <header class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Geeta Stationery"/></a>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo-new.png" alt="Geeta Stationery"/></a>
     <nav class="nav-links" id="navLinks">
-      <a href="../index.html">Home</a>
-      <a href="shop.html" class="active">Shop</a>
-      <a href="print-services.html">Print &amp; Copy</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="shop.html?cat=all">Categories</a><a href="shop.html?sort=new">New Arrivals</a><a href="shop.html?sort=popular">Best Sellers</a><a href="print-services.html">Print &amp; Copy</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
-      <a href="shop.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      <button class="nav-icon-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+      <button class="nav-icon-btn"><i class="far fa-user"></i></button>
+      <a href="shop.html" class="nav-icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search products..." id="searchInput"/>
-    <button onclick="doSearch()"><i class="fas fa-search"></i></button>
-  </div>
+  <div class="search-bar" id="searchBar"><input type="text" placeholder="Search products..." id="searchInput"/><button onclick="doSearch()"><i class="fas fa-search"></i></button></div>
 </header>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="container">
-    <h1>Our Products</h1>
-    <p>Books • Notebooks • Stationery • Art • Office Supplies</p>
-  </div>
-</div>
+<div class="page-hero"><div class="container"><h1>Our Products</h1><p>Books · Notebooks · Stationery · Art · Toys · Gifts · Shoes</p></div></div>
 
-<!-- SHOP LAYOUT -->
 <div class="container">
   <div class="shop-layout">
-    <!-- SIDEBAR -->
     <aside class="shop-sidebar">
       <h3 class="sidebar-title">Filter Products</h3>
       <div class="filter-group">
@@ -65,20 +47,11 @@
       <div class="filter-group">
         <label>Price Range</label>
         <button class="filter-btn price-filter" data-min="0" data-max="100">Under ₹100</button>
-        <button class="filter-btn price-filter" data-min="100" data-max="200">₹100 – ₹200</button>
-        <button class="filter-btn price-filter" data-min="200" data-max="99999">Above ₹200</button>
-      </div>
-      <div class="filter-group">
-        <label>Class</label>
-        <button class="filter-btn class-filter" data-class="1-5">Class 1 – 5</button>
-        <button class="filter-btn class-filter" data-class="6-8">Class 6 – 8</button>
-        <button class="filter-btn class-filter" data-class="9-10">Class 9 – 10</button>
-        <button class="filter-btn class-filter" data-class="11-12">Class 11 – 12</button>
+        <button class="filter-btn price-filter" data-min="100" data-max="300">₹100 – ₹300</button>
+        <button class="filter-btn price-filter" data-min="300" data-max="99999">Above ₹300</button>
       </div>
     </aside>
-
-    <!-- MAIN PRODUCTS -->
-    <main class="shop-main">
+    <main>
       <div class="shop-toolbar">
         <p class="results-count" id="resultsCount">Showing all products</p>
         <select class="sort-select" id="sortSelect">
@@ -93,112 +66,70 @@
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../images/logo.png" alt="Geeta Stationery" class="footer-logo"/>
-        <p>Jodhpur's most trusted stationery store.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="https://wa.me/917568521210"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="../index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="print-services.html">Print &amp; Copy</a>
-      <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Categories</h4>
-        <a href="shop.html?cat=books">School Books</a>
-        <a href="shop.html?cat=notebooks">Notebooks</a>
-        <a href="shop.html?cat=art">Art Supplies</a>
-        <a href="shop.html?cat=office">Office Supplies</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p>
-        <p><i class="fas fa-phone"></i> +91 75685 21210</p>
-        <p><i class="fas fa-clock"></i> Mon–Sat: 9AM – 8PM</p>
-      </div>
-    </div>
-    <div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div>
-  </div>
-</footer>
-
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><img src="../images/logo-new.png" alt="Geeta Stationery" class="footer-logo"/><p>Jodhpur's most trusted stationery store. Write. Create. Inspire.</p><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="https://wa.me/917568521210" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div>
+  <div class="footer-col"><h4>Quick Links</h4><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="print-services.html">Print &amp; Copy</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="footer-col"><h4>Categories</h4><a href="shop.html?cat=books">School Books</a><a href="shop.html?cat=notebooks">Notebooks</a><a href="shop.html?cat=art">Art Supplies</a><a href="shop.html?cat=toys">Toys &amp; Games</a></div>
+  <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p><p><i class="fas fa-phone"></i> +91 75685 21210</p><p><i class="fas fa-clock"></i> Mon–Sat: 9AM–8PM</p></div>
+</div><div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div></div></footer>
 <a href="https://wa.me/917568521210" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="ai-chat-fab" onclick="toggleAIChat()"><i class="fas fa-robot"></i></button>
+<div class="ai-chat-window" id="aiChatWindow"><div class="ai-chat-header"><div class="ai-avatar">🤖</div><div class="ai-chat-header-info"><h4>Geeta AI Assistant</h4><p><span class="ai-online-dot"></span> Online</p></div><button class="ai-close-btn" onclick="toggleAIChat()"><i class="fas fa-times"></i></button></div><div class="ai-chat-msgs" id="aiMsgs"><div class="ai-msg bot">Hi! 👋 Need help finding a product? Just ask!</div></div><div class="ai-quick-replies" id="quickReplies"><button class="ai-quick-btn" onclick="quickReply('School books')">📚 Books</button><button class="ai-quick-btn" onclick="quickReply('Art supplies')">🎨 Art</button><button class="ai-quick-btn" onclick="quickReply('Price range')">💰 Prices</button></div><div class="ai-chat-input"><input type="text" placeholder="Ask me anything..." id="aiInput" onkeydown="if(event.key==='Enter')sendAIMsg()"/><button class="ai-send-btn" onclick="sendAIMsg()"><i class="fas fa-paper-plane"></i></button></div></div>
 
 <script src="../js/products.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/chatbot.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
-  const catParam = params.get('cat') || params.get('class') || 'all';
+  const catParam = params.get('cat') || 'all';
   const searchParam = params.get('search') || '';
   if (searchParam) document.getElementById('searchInput').value = searchParam;
+  if (catParam !== 'all') {
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => {
+      b.classList.toggle('active', b.dataset.filter === catParam);
+    });
+  }
   renderShop(catParam, searchParam);
-  initShopFilters(catParam);
 });
 
 function renderShop(category = 'all', search = '') {
   let filtered = [...PRODUCTS];
-  if (category && category !== 'all') {
-    filtered = filtered.filter(p => p.category === category);
-  }
-  if (search) {
-    const q = search.toLowerCase();
-    filtered = filtered.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || getCategoryLabel(p.category).toLowerCase().includes(q));
-  }
+  if (category && category !== 'all') filtered = filtered.filter(p => p.category === category);
+  if (search) { const q = search.toLowerCase(); filtered = filtered.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)); }
   const sort = document.getElementById('sortSelect')?.value || 'default';
   if (sort === 'price-low') filtered.sort((a,b) => a.price - b.price);
   if (sort === 'price-high') filtered.sort((a,b) => b.price - a.price);
   if (sort === 'name') filtered.sort((a,b) => a.name.localeCompare(b.name));
-
   const grid = document.getElementById('shopGrid');
   const count = document.getElementById('resultsCount');
-  if (!grid) return;
-  if (!filtered.length) {
-    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#6B7280;padding:60px 0;">No products found. Try a different filter.</p>';
-    count.textContent = '0 products found';
-    return;
-  }
+  if (!filtered.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-light);padding:60px 0;font-weight:600;">No products found. Try a different filter.</p>'; count.textContent = '0 products'; return; }
   count.textContent = `Showing ${filtered.length} product${filtered.length !== 1 ? 's' : ''}`;
   grid.innerHTML = filtered.map(renderProductCard).join('');
 }
-
-function initShopFilters(activeCat) {
-  document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-    if (btn.dataset.filter === activeCat) { btn.classList.add('active'); }
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderShop(btn.dataset.filter, document.getElementById('searchInput')?.value || '');
-    });
+document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderShop(btn.dataset.filter, document.getElementById('searchInput')?.value || '');
   });
-  document.querySelectorAll('.filter-btn.price-filter').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn.price-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const min = parseInt(btn.dataset.min), max = parseInt(btn.dataset.max);
-      const cat = document.querySelector('.filter-btn[data-filter].active')?.dataset.filter || 'all';
-      let filtered = cat === 'all' ? [...PRODUCTS] : PRODUCTS.filter(p => p.category === cat);
-      filtered = filtered.filter(p => p.price >= min && p.price <= max);
-      const grid = document.getElementById('shopGrid');
-      grid.innerHTML = filtered.map(renderProductCard).join('');
-      document.getElementById('resultsCount').textContent = `Showing ${filtered.length} products`;
-    });
-  });
-  document.getElementById('sortSelect')?.addEventListener('change', () => {
+});
+document.querySelectorAll('.filter-btn.price-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn.price-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const min = parseInt(btn.dataset.min), max = parseInt(btn.dataset.max);
     const cat = document.querySelector('.filter-btn[data-filter].active')?.dataset.filter || 'all';
-    renderShop(cat, document.getElementById('searchInput')?.value || '');
+    let f = cat === 'all' ? [...PRODUCTS] : PRODUCTS.filter(p => p.category === cat);
+    f = f.filter(p => p.price >= min && p.price <= max);
+    document.getElementById('shopGrid').innerHTML = f.map(renderProductCard).join('');
+    document.getElementById('resultsCount').textContent = `Showing ${f.length} products`;
   });
-}
+});
+document.getElementById('sortSelect')?.addEventListener('change', () => {
+  const cat = document.querySelector('.filter-btn[data-filter].active')?.dataset.filter || 'all';
+  renderShop(cat, document.getElementById('searchInput')?.value || '');
+});
 </script>
 </body>
 </html>

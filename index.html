@@ -3,128 +3,204 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Geeta Stationery – Write. Learn. Grow. | Jodhpur</title>
-  <meta name="description" content="Geeta Stationery – Jodhpur's most trusted stationery shop. School books for APS, KV, Global International, Vidheya Aashram and all major schools. Notebooks, art supplies, office stationery and more."/>
-  <meta name="keywords" content="stationery shop Jodhpur, school books Jodhpur, APS books, KV books, Global International School books, Vidheya Aashram school, Geeta Stationery Jodhpur"/>
-  <link rel="icon" href="images/logo.png" type="image/png"/>
+  <title>Geeta Stationery – Write. Create. Inspire. | Jodhpur</title>
+  <meta name="description" content="Geeta Stationery – Jodhpur's most trusted stationery shop. School books, notebooks, art supplies, toys, gifts & print services."/>
+  <meta name="keywords" content="stationery shop Jodhpur, school books, APS books, KV books, notebooks, art supplies, Geeta Stationery"/>
+  <link rel="icon" href="images/logo-new.png" type="image/png"/>
   <link rel="stylesheet" href="css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ===== NAVBAR ===== -->
 <header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <img src="images/logo.png" alt="Geeta Stationery Logo"/>
+      <img src="images/logo-new.png" alt="Geeta Stationery"/>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="index.html" class="active">Home</a>
       <a href="pages/shop.html">Shop</a>
+      <a href="pages/shop.html?cat=all">Categories</a>
+      <a href="pages/shop.html?sort=new">New Arrivals</a>
+      <a href="pages/shop.html?sort=popular">Best Sellers</a>
       <a href="pages/print-services.html">Print &amp; Copy</a>
-      <a href="pages/about.html">About</a>
+      <a href="pages/about.html">About Us</a>
       <a href="pages/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
-      <a href="pages/shop.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+      <button class="nav-icon-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+      <button class="nav-icon-btn"><i class="far fa-user"></i></button>
+      <a href="pages/shop.html" class="nav-icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search notebooks, books, art supplies..." id="searchInput"/>
+    <input type="text" placeholder="Search for notebooks, pens, books..." id="searchInput"/>
     <button onclick="doSearch()"><i class="fas fa-search"></i></button>
   </div>
 </header>
 
-<!-- ===== LOGO HERO — First thing user sees ===== -->
-<div class="logo-hero">
-  <div class="logo-hero-inner">
-    <img src="images/logo.png" alt="Geeta Stationery" class="logo-hero-img"/>
-    <h1>GEETA <span>STATIONERY</span></h1>
-    <p class="logo-hero-tagline">Write &nbsp;·&nbsp; Learn &nbsp;·&nbsp; Grow</p>
-    <div class="logo-hero-divider">
-      <span></span>
+<!-- ===== HERO (Split layout) ===== -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <div class="hero-tag-pill">
       <i class="fas fa-star"></i>
-      <span></span>
+      Write. Create. Inspire.
+    </div>
+    <h1 class="hero-title">
+      Everything You Need,<br/>
+      <span>Everyday.</span>
+    </h1>
+    <p class="hero-desc">Premium quality stationery for students, professionals and creators. Designed to bring your ideas to life.</p>
+    <div class="hero-btns">
+      <a href="pages/shop.html" class="btn-primary">Shop Now &nbsp;→</a>
+      <a href="pages/shop.html?cat=all" class="btn-outline">Explore Categories</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <h3>500<span>+</span></h3>
+        <p>PRODUCTS</p>
+      </div>
+      <div class="hero-stat">
+        <h3>5K<span>+</span></h3>
+        <p>HAPPY CUSTOMERS</p>
+      </div>
+      <div class="hero-stat">
+        <h3>10<span>+</span></h3>
+        <p>YEARS OF TRUST</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=900&q=85" alt="Stationery Collection"/>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon-wrap"><i class="fas fa-truck"></i></div>
+      <div><h4>Store Pickup</h4><p>Visit & collect your order</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+      <div><h4>Quality Assured</h4><p>Premium products you can trust</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap"><i class="fas fa-tag"></i></div>
+      <div><h4>Best Prices</h4><p>Affordable prices everyday</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+      <div><h4>WhatsApp Support</h4><p>+91 75685 21210</p></div>
     </div>
   </div>
 </div>
-
-<!-- ===== HERO SLIDER ===== -->
-<section class="hero" id="hero">
-  <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=1600&q=80')"><div class="slide-overlay"></div></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=1600&q=80')"><div class="slide-overlay"></div></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="slide-overlay"></div></div>
-  </div>
-  <div class="hero-content">
-    <p class="hero-tag">Jodhpur's Most Trusted Stationery Store</p>
-    <h1 class="hero-title">All School Supplies<br/><span>Under One Roof</span></h1>
-    <p class="hero-sub">Books &nbsp;·&nbsp; Notebooks &nbsp;·&nbsp; Art Supplies &nbsp;·&nbsp; Office Stationery</p>
-    <div class="hero-btns">
-      <a href="pages/shop.html" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
-      <a href="pages/contact.html" class="btn-outline">Contact Us</a>
-    </div>
-  </div>
-  <div class="hero-dots" id="heroDots"></div>
-</section>
 
 <!-- MARQUEE -->
 <div class="marquee-bar">
   <div class="marquee-track">
-    <span>📚 School Books &nbsp;|&nbsp;</span>
+    <span>✏️ School Books &nbsp;|&nbsp;</span>
     <span>📓 Notebooks &nbsp;|&nbsp;</span>
     <span>🎨 Art Supplies &nbsp;|&nbsp;</span>
     <span>🖊️ Pens & Pencils &nbsp;|&nbsp;</span>
     <span>📐 Geometry Sets &nbsp;|&nbsp;</span>
-    <span>🗂️ Office Supplies &nbsp;|&nbsp;</span>
-    <span>🏫 APS Books &nbsp;|&nbsp;</span>
-    <span>🏫 KV Books &nbsp;|&nbsp;</span>
-    <span>📚 School Books &nbsp;|&nbsp;</span>
+    <span>🖨️ Print & Copy &nbsp;|&nbsp;</span>
+    <span>🎁 Gift Packaging &nbsp;|&nbsp;</span>
+    <span>👟 School Shoes &nbsp;|&nbsp;</span>
+    <span>🧸 Toys & Games &nbsp;|&nbsp;</span>
+    <span>✏️ School Books &nbsp;|&nbsp;</span>
     <span>📓 Notebooks &nbsp;|&nbsp;</span>
     <span>🎨 Art Supplies &nbsp;|&nbsp;</span>
     <span>🖊️ Pens & Pencils &nbsp;|&nbsp;</span>
     <span>📐 Geometry Sets &nbsp;|&nbsp;</span>
-    <span>🗂️ Office Supplies &nbsp;|&nbsp;</span>
-    <span>🏫 APS Books &nbsp;|&nbsp;</span>
-    <span>🏫 KV Books &nbsp;|&nbsp;</span>
+    <span>🖨️ Print & Copy &nbsp;|&nbsp;</span>
+    <span>🎁 Gift Packaging &nbsp;|&nbsp;</span>
   </div>
 </div>
 
-<!-- CATEGORIES -->
+<!-- ===== CATEGORIES ===== -->
 <section class="section categories-section">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">Browse By Category</span>
-      <h2>What Are You Looking For?</h2>
+    <div class="categories-header">
+      <div>
+        <span class="section-tag">Browse Our Collection</span>
+        <h2>Shop by Category</h2>
+      </div>
+      <a href="pages/shop.html" class="btn-ghost">View All Categories &nbsp;→</a>
     </div>
-    <div class="categories-grid">
-      <a href="pages/shop.html?cat=books" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80" alt="Books"/></div>
-        <h3>School Books</h3><p>Class 1 – 12</p>
+    <div class="cats-grid">
+      <a href="pages/shop.html?cat=stationery" class="cat-card">
+        <div class="cat-img-wrap"><img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=200&q=80" alt="Writing"/></div>
+        <h3>Writing</h3><p>Pens, Pencils</p>
       </a>
       <a href="pages/shop.html?cat=notebooks" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=300&q=80" alt="Notebooks"/></div>
-        <h3>Notebooks</h3><p>All Sizes & Types</p>
-      </a>
-      <a href="pages/shop.html?cat=stationery" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=300&q=80" alt="Stationery"/></div>
-        <h3>Stationery</h3><p>Pens, Pencils & More</p>
+        <div class="cat-img-wrap"><img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=200&q=80" alt="Notebooks"/></div>
+        <h3>Notebooks</h3><p>Notebooks, Diaries</p>
       </a>
       <a href="pages/shop.html?cat=art" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=300&q=80" alt="Art Supplies"/></div>
-        <h3>Art Supplies</h3><p>Colors, Brushes & Canvas</p>
+        <div class="cat-img-wrap"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=200&q=80" alt="Art Supplies"/></div>
+        <h3>Art Supplies</h3><p>Sketch, Color, Paints</p>
       </a>
       <a href="pages/shop.html?cat=office" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=300&q=80" alt="Office"/></div>
-        <h3>Office Supplies</h3><p>Files, Folders & More</p>
+        <div class="cat-img-wrap"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=200&q=80" alt="Office"/></div>
+        <h3>Office Essentials</h3><p>Staplers, Clips</p>
       </a>
-      <a href="pages/shop.html?cat=geometry" class="cat-card">
-        <div class="cat-icon"><img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=300&q=80" alt="Geometry"/></div>
-        <h3>Geometry Sets</h3><p>Compasses, Rulers & More</p>
+      <a href="pages/shop.html?cat=books" class="cat-card">
+        <div class="cat-img-wrap"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&q=80" alt="Books"/></div>
+        <h3>School Supplies</h3><p>All You Need</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="section products-section">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <span class="section-tag">Top Picks</span>
+        <h2>Featured Products</h2>
+      </div>
+      <a href="pages/shop.html" class="btn-ghost">View All &nbsp;→</a>
+    </div>
+    <div class="products-grid" id="featuredProducts"></div>
+  </div>
+</section>
+
+<!-- ===== OFFERS BANNER ===== -->
+<section class="featured-banner">
+  <div class="container">
+    <div class="featured-grid">
+      <div class="feat-card feat-big">
+        <img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=800&q=80" alt="Back to School"/>
+        <div class="feat-text">
+          <span class="offer-tag">Back to School Season</span>
+          <h2>Up to 30% OFF<br/>on All Notebooks</h2>
+          <a href="pages/shop.html?cat=notebooks" class="btn-primary">Shop Now →</a>
+        </div>
+      </div>
+      <div class="feat-small-stack">
+        <div class="feat-card feat-small">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Art Supplies"/>
+          <div class="feat-text">
+            <span class="offer-tag">Art Supplies</span>
+            <h3>Color Sets from ₹99</h3>
+            <a href="pages/shop.html?cat=art" class="btn-outline-white" style="padding:9px 20px;font-size:0.8rem;">Explore</a>
+          </div>
+        </div>
+        <div class="feat-card feat-small">
+          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80" alt="Gifts"/>
+          <div class="feat-text">
+            <span class="offer-tag">Bulk Orders Welcome</span>
+            <h3>School &amp; Office Supply</h3>
+            <a href="pages/contact.html" class="btn-outline-white" style="padding:9px 20px;font-size:0.8rem;">Enquire</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -132,233 +208,252 @@
 <!-- ===== SCHOOLS WE COVER ===== -->
 <section class="section schools-section">
   <div class="container">
-    <div class="schools-intro">
+    <div class="section-head center">
       <span class="section-tag">Schools We Cover</span>
       <h2>Books Available for All Major Schools</h2>
-      <p>We stock the complete set of textbooks, notebooks, and stationery required by all major schools in Jodhpur — from government schools to top international institutions.</p>
+      <p class="section-sub" style="margin-top:8px;">We stock complete textbooks & stationery for all major Jodhpur schools.</p>
     </div>
     <div class="schools-grid">
       <div class="school-card">
         <div class="school-icon">🎖️</div>
         <span class="school-badge">Army</span>
         <h3>Army Public School</h3>
-        <p>APS Jodhpur — All classes books, notebooks & stationery available.</p>
+        <p>APS Jodhpur — all classes books & stationery.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">🏛️</div>
         <span class="school-badge">Central Govt.</span>
-        <h3>Kendriya Vidyalaya (KV)</h3>
-        <p>NCERT books, uniform stationery & all KV requirements in stock.</p>
+        <h3>Kendriya Vidyalaya</h3>
+        <p>NCERT books & all KV requirements in stock.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">🌍</div>
         <span class="school-badge">International</span>
-        <h3>Global International School</h3>
-        <p>All course books, premium stationery & art supplies for GIS students.</p>
+        <h3>Global International</h3>
+        <p>Course books & premium stationery for GIS.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">📖</div>
         <span class="school-badge">Private</span>
-        <h3>Vidheya Aashram School</h3>
-        <p>Complete book sets, notebooks & supplies for all Vidheya Aashram classes.</p>
+        <h3>Vidheya Aashram</h3>
+        <p>Complete book sets for all classes.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">🏫</div>
         <span class="school-badge">CBSE</span>
         <h3>Sophia School</h3>
-        <p>CBSE curriculum books and complete stationery kits available here.</p>
+        <p>CBSE books & stationery kits available.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">🎓</div>
         <span class="school-badge">RBSE</span>
         <h3>Jawahar Navodaya</h3>
-        <p>Navodaya books, RBSE textbooks & all required materials in stock.</p>
+        <p>RBSE textbooks & all materials in stock.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">⭐</div>
         <span class="school-badge">CBSE</span>
         <h3>St. Anne's School</h3>
-        <p>Complete book list and stationery for all classes at St. Anne's.</p>
+        <p>Complete book list for all St. Anne's classes.</p>
       </div>
       <div class="school-card">
         <div class="school-icon">🏆</div>
         <span class="school-badge">All Boards</span>
-        <h3>& Many More...</h3>
-        <p>We cover all Jodhpur schools. Ask us about your school's book list.</p>
+        <h3>&amp; Many More...</h3>
+        <p>Ask us for your school's complete book list.</p>
       </div>
     </div>
-
-    <!-- Schools Available Banner -->
-    <div class="schools-available-banner">
+    <div class="schools-banner">
       <div>
         <h3>Can't Find Your School? Ask Us!</h3>
-        <p>We can arrange books for any school in Jodhpur. Contact us on WhatsApp with your school name and class.</p>
-        <div class="schools-tag-list">
-          <span class="schools-tag">CBSE</span>
-          <span class="schools-tag">RBSE</span>
-          <span class="schools-tag">ICSE</span>
-          <span class="schools-tag">NCERT</span>
-          <span class="schools-tag">All Classes 1–12</span>
-          <span class="schools-tag">Competitive Exams</span>
+        <p>Send your school name & class on WhatsApp — we'll arrange everything.</p>
+        <div class="board-tags">
+          <span class="board-tag">CBSE</span>
+          <span class="board-tag">RBSE</span>
+          <span class="board-tag">ICSE</span>
+          <span class="board-tag">NCERT</span>
+          <span class="board-tag">Class 1–12</span>
+          <span class="board-tag">Competitive Exams</span>
         </div>
       </div>
-      <div style="flex-shrink:0;">
-        <a href="https://wa.me/917568521210?text=Hi! I need books for my school." class="btn-whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i> Ask on WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="section products-section">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag">Top Picks</span>
-      <h2>Featured Products</h2>
-    </div>
-    <div class="products-grid" id="featuredProducts"></div>
-    <div class="center-btn">
-      <a href="pages/shop.html" class="btn-primary">View All Products <i class="fas fa-arrow-right"></i></a>
+      <a href="https://wa.me/917568521210?text=Hi!%20I%20need%20books%20for%20my%20school." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> Ask on WhatsApp
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ===== NEW ARRIVALS ===== -->
-<section class="section new-arrivals-section">
+<section class="section arrivals-section">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">Just Arrived</span>
-      <h2>New Products & Latest Technology</h2>
+    <div class="products-header">
+      <div>
+        <span class="section-tag">Just Arrived</span>
+        <h2>New Products &amp; Latest Tech</h2>
+      </div>
+      <a href="pages/shop.html" class="btn-ghost">View All &nbsp;→</a>
     </div>
     <div class="arrivals-grid">
       <div class="arrival-card">
-        <span class="new-tag">New</span>
+        <span class="new-label">New</span>
         <div class="arrival-img"><img src="https://images.unsplash.com/photo-1585069403769-5823fa1e09ab?w=400&q=80" alt="Smart Pen"/></div>
         <div class="arrival-info">
           <h3>Smart Digital Writing Pen</h3>
-          <p>Digitize your handwriting in real-time. Store notes on your phone.</p>
-          <span class="price">₹899</span>
+          <p>Digitize your notes in real-time to your phone.</p>
+          <span class="arrival-price">₹899</span>
         </div>
       </div>
       <div class="arrival-card">
-        <span class="new-tag">New</span>
+        <span class="new-label">New</span>
         <div class="arrival-img"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80" alt="NCERT 2025"/></div>
         <div class="arrival-info">
           <h3>NCERT New Edition 2025–26</h3>
-          <p>Latest revised NCERT textbooks for all classes as per new syllabus.</p>
-          <span class="price">From ₹65</span>
+          <p>Latest revised NCERT textbooks for all classes.</p>
+          <span class="arrival-price">From ₹65</span>
         </div>
       </div>
       <div class="arrival-card">
-        <span class="new-tag">New</span>
-        <div class="arrival-img"><img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&q=80" alt="Pro Color Kit"/></div>
+        <span class="new-label">New</span>
+        <div class="arrival-img"><img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&q=80" alt="Color Kit"/></div>
         <div class="arrival-info">
           <h3>Professional Artist Color Kit</h3>
-          <p>48-shade premium artist kit — watercolor, acrylic & sketch set combo.</p>
-          <span class="price">₹599</span>
+          <p>48-shade premium kit — watercolor & acrylic combo.</p>
+          <span class="arrival-price">₹599</span>
         </div>
       </div>
       <div class="arrival-card">
-        <span class="new-tag">New</span>
+        <span class="new-label">New</span>
         <div class="arrival-img"><img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=400&q=80" alt="Erasable Pen"/></div>
         <div class="arrival-info">
           <h3>Pilot FriXion Erasable Pen Set</h3>
-          <p>Write, erase, rewrite with heat-erasable technology. 10 color set.</p>
-          <span class="price">₹349</span>
+          <p>Write, erase, rewrite — heat-erasable technology.</p>
+          <span class="arrival-price">₹349</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OFFERS BANNER -->
-<section class="offers-section">
-  <div class="container">
-    <div class="offers-grid">
-      <div class="offer-card offer-big">
-        <img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=800&q=80" alt="Back to School"/>
-        <div class="offer-text">
-          <p class="offer-tag">Back to School Season</p>
-          <h2>Up to 30% OFF<br/>on All Notebooks</h2>
-          <a href="pages/shop.html?cat=notebooks" class="btn-primary">Shop Now</a>
-        </div>
-      </div>
-      <div class="offer-small-stack">
-        <div class="offer-card offer-small">
-          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&q=80" alt="Art Supplies"/>
-          <div class="offer-text">
-            <p class="offer-tag">Art Supplies</p>
-            <h3>Color Sets from ₹99</h3>
-            <a href="pages/shop.html?cat=art" class="btn-outline-sm">Explore</a>
-          </div>
-        </div>
-        <div class="offer-card offer-small">
-          <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=500&q=80" alt="Office"/>
-          <div class="offer-text">
-            <p class="offer-tag">Bulk Orders Welcome</p>
-            <h3>School & Office Supply</h3>
-            <a href="pages/contact.html" class="btn-outline-sm">Enquire</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CLASS-WISE -->
+<!-- ===== CLASS-WISE ===== -->
 <section class="section class-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="section-tag">School Books</span>
       <h2>Shop By Class</h2>
     </div>
     <div class="class-grid">
-      <a href="pages/shop.html?class=1-5" class="class-card"><span class="class-num">1–5</span><p>Primary School</p></a>
-      <a href="pages/shop.html?class=6-8" class="class-card"><span class="class-num">6–8</span><p>Middle School</p></a>
-      <a href="pages/shop.html?class=9-10" class="class-card"><span class="class-num">9–10</span><p>Secondary</p></a>
-      <a href="pages/shop.html?class=11-12" class="class-card"><span class="class-num">11–12</span><p>Senior Secondary</p></a>
+      <a href="pages/shop.html?class=1-5" class="class-card"><span class="class-num">1–5</span><span class="class-label">Primary School</span></a>
+      <a href="pages/shop.html?class=6-8" class="class-card"><span class="class-num">6–8</span><span class="class-label">Middle School</span></a>
+      <a href="pages/shop.html?class=9-10" class="class-card"><span class="class-num">9–10</span><span class="class-label">Secondary</span></a>
+      <a href="pages/shop.html?class=11-12" class="class-card"><span class="class-num">11–12</span><span class="class-label">Senior Secondary</span></a>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="section trust-section">
+<!-- ===== TOYS GIFTS SHOES ===== -->
+<section class="section extras-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
+      <span class="section-tag">More In Our Store</span>
+      <h2>Toys, Gifts &amp; School Shoes</h2>
+    </div>
+    <div class="extras-grid">
+      <div class="extra-card" onclick="window.location='pages/shop.html?cat=toys'">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Toys"/>
+        <div class="extra-overlay"></div>
+        <div class="extra-content">
+          <span class="extra-label">Kids Section</span>
+          <h3>Toys &amp; Games</h3>
+          <p>Toy cars, puzzles, building blocks &amp; plush toys.</p>
+          <span class="extra-link">Shop Toys →</span>
+        </div>
+      </div>
+      <div class="extra-card" onclick="window.location='pages/shop.html?cat=gifts'">
+        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=700&q=80" alt="Gifts"/>
+        <div class="extra-overlay"></div>
+        <div class="extra-content">
+          <span class="extra-label">Gift Section</span>
+          <h3>Gift Packaging</h3>
+          <p>Readymade gift boxes, wrapping paper &amp; greeting cards.</p>
+          <span class="extra-link">Shop Gifts →</span>
+        </div>
+      </div>
+      <div class="extra-card" onclick="window.location='pages/shop.html?cat=shoes'">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80" alt="School Shoes"/>
+        <div class="extra-overlay"></div>
+        <div class="extra-content">
+          <span class="extra-label">Footwear</span>
+          <h3>School Shoes</h3>
+          <p>Black school shoes for boys &amp; girls, white canvas PT shoes.</p>
+          <span class="extra-link">Shop Shoes →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRINT TEASER ===== -->
+<div class="print-teaser">
+  <div class="container">
+    <div class="print-teaser-grid">
+      <div>
+        <span class="section-tag" style="color:rgba(255,180,200,0.8);">At Our Store</span>
+        <h2>Print, Photocopy &amp; More</h2>
+        <p>Photocopy, color printing, B&amp;W printing, passport photos, lamination &amp; scanning — all done on the spot at our store.</p>
+        <div class="print-chips">
+          <div class="print-chip"><span>📄</span><span>Photocopy / Xerox</span></div>
+          <div class="print-chip"><span>🖨️</span><span>Color Printing</span></div>
+          <div class="print-chip"><span>📷</span><span>Passport Photos</span></div>
+          <div class="print-chip"><span>🗂️</span><span>Lamination</span></div>
+        </div>
+        <div class="print-btns">
+          <a href="pages/print-services.html" class="btn-primary">View All Services →</a>
+          <a href="https://wa.me/917568521210?text=Hi!%20I%20want%20to%20send%20a%20file%20for%20printing." class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Send File</a>
+        </div>
+      </div>
+      <div class="print-img">
+        <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=700&q=80" alt="Print Services"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHY US ===== -->
+<section class="section why-section">
+  <div class="container">
+    <div class="section-head center">
       <span class="section-tag">Why Choose Us</span>
       <h2>Trusted by Thousands of Students</h2>
     </div>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-certificate"></i></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-certificate"></i></div>
         <h3>100% Genuine Products</h3>
         <p>All products are original and quality checked before selling.</p>
       </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-tags"></i></div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-tags"></i></div>
         <h3>Best Prices in Jodhpur</h3>
-        <p>We offer competitive prices to ensure every student can afford quality.</p>
+        <p>Competitive prices so every student can afford quality.</p>
       </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-boxes"></i></div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-boxes"></i></div>
         <h3>Huge Product Range</h3>
-        <p>From Class 1 to 12 books, art to office — everything in one place.</p>
+        <p>From Class 1 books to office supplies — all in one place.</p>
       </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fab fa-whatsapp"></i></div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fab fa-whatsapp"></i></div>
         <h3>Quick WhatsApp Support</h3>
-        <p>Message us on WhatsApp for fast help, orders & school book lists.</p>
+        <p>Message us for fast help, orders &amp; school book lists.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ===== TESTIMONIALS ===== -->
 <section class="section testimonials-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="section-tag">What Customers Say</span>
       <h2>Real Reviews, Real Students</h2>
     </div>
@@ -370,94 +465,25 @@
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"We order bulk stationery for our school from Geeta Stationery every year. Always reliable and on time. Highly recommended for schools."</p>
+        <p>"We order bulk stationery for our school from Geeta Stationery every year. Always reliable and on time. Highly recommended!"</p>
         <div class="reviewer"><div class="avatar">P</div><div><strong>Priya Mehta</strong><span>School Teacher, APS Jodhpur</span></div></div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★☆</div>
-        <p>"Amazing art supplies collection! Found everything for my Global International School project — watercolors, canvas, brushes at great prices."</p>
+        <p>"Amazing art supplies! Found everything for my project — watercolors, canvas, brushes — all at great prices."</p>
         <div class="reviewer"><div class="avatar">A</div><div><strong>Ankit Joshi</strong><span>GIS Student</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOYS GIFTS SHOES -->
-<section class="section" style="background:var(--white);">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag">More In Our Store</span>
-      <h2>Toys, Gifts &amp; School Shoes</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px;">
-      <div style="border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:320px;cursor:pointer;" onclick="window.location='pages/shop.html?cat=toys'">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Toys" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,43,74,0.9),rgba(26,43,74,0.2));"></div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;color:#fff;">
-          <span style="background:rgba(200,150,12,0.2);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.68rem;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:3px;text-transform:uppercase;display:inline-block;margin-bottom:10px;">Kids Section</span>
-          <h3 style="color:#fff;font-size:1.4rem;margin-bottom:8px;">Toys &amp; Games</h3>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin-bottom:14px;">Toy cars, puzzles, building blocks, plush toys &amp; more — great gifts for children.</p>
-          <span style="color:var(--gold-light);font-size:0.82rem;font-weight:600;">Shop Toys →</span>
-        </div>
-      </div>
-      <div style="border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:320px;cursor:pointer;" onclick="window.location='pages/shop.html?cat=gifts'">
-        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=700&q=80" alt="Gifts" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,43,74,0.9),rgba(26,43,74,0.2));"></div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;color:#fff;">
-          <span style="background:rgba(200,150,12,0.2);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.68rem;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:3px;text-transform:uppercase;display:inline-block;margin-bottom:10px;">Gift Section</span>
-          <h3 style="color:#fff;font-size:1.4rem;margin-bottom:8px;">Gift Packaging</h3>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin-bottom:14px;">Readymade gift boxes, wrapping paper, ribbons, bows &amp; greeting cards available.</p>
-          <span style="color:var(--gold-light);font-size:0.82rem;font-weight:600;">Shop Gifts →</span>
-        </div>
-      </div>
-      <div style="border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:320px;cursor:pointer;" onclick="window.location='pages/shop.html?cat=shoes'">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80" alt="School Shoes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,43,74,0.9),rgba(26,43,74,0.2));"></div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;color:#fff;">
-          <span style="background:rgba(200,150,12,0.2);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.68rem;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:3px;text-transform:uppercase;display:inline-block;margin-bottom:10px;">Footwear</span>
-          <h3 style="color:#fff;font-size:1.4rem;margin-bottom:8px;">School Shoes</h3>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin-bottom:14px;">Black school shoes for boys &amp; girls, white canvas PT shoes — all school types covered.</p>
-          <span style="color:var(--gold-light);font-size:0.82rem;font-weight:600;">Shop Shoes →</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRINT & COPY TEASER -->
-<section class="section" style="background:var(--navy);padding:80px 0;">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-      <div>
-        <span class="section-tag" style="color:var(--gold-light);">At Our Store</span>
-        <h2 style="color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:16px;">Print, Photocopy &amp; More</h2>
-        <p style="color:rgba(255,255,255,0.6);font-size:0.92rem;line-height:1.8;margin-bottom:20px;">Visit our store for photocopy, color printing, B&amp;W printing, passport photos, lamination and scanning — done on the spot.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;">
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">📄</span><span style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:500;">Photocopy / Xerox</span></div>
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🖨️</span><span style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:500;">Color Printing</span></div>
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">📷</span><span style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:500;">Passport Photos</span></div>
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🗂️</span><span style="color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:500;">Lamination</span></div>
-        </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="pages/print-services.html" class="btn-primary">View All Services <i class="fas fa-arrow-right"></i></a>
-          <a href="https://wa.me/917568521210?text=Hi!%20I%20want%20to%20send%20a%20file%20for%20printing." class="btn-whatsapp" target="_blank" style="padding:14px 24px;font-size:0.88rem;"><i class="fab fa-whatsapp"></i> Send File</a>
-        </div>
-      </div>
-      <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);">
-        <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=700&q=80" alt="Print Services" style="width:100%;height:360px;object-fit:cover;display:block;"/>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
+<!-- ===== CTA ===== -->
 <section class="cta-section">
-  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=1400&q=80')">
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
+  <div class="container">
+    <div class="cta-inner">
       <h2>Need Help Finding the Right Books?</h2>
-      <p>Share your school name and class on WhatsApp — we'll prepare your complete book list!</p>
-      <a href="https://wa.me/917568521210" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      <p>Share your school name &amp; class on WhatsApp — we'll prepare your complete book list!</p>
+      <a href="https://wa.me/917568521210" class="btn-whatsapp" target="_blank" style="display:inline-flex;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -474,7 +500,7 @@
           <img src="images/owner.jpg" alt="Store Owner – Geeta Stationery"/>
         </div>
         <p class="owner-name">Geeta Stationery</p>
-        <p class="owner-title">Founder &amp; Owner &nbsp;·&nbsp; Jodhpur</p>
+        <p class="owner-title">Founder &amp; Owner · Jodhpur</p>
         <div class="owner-divider"></div>
         <p class="owner-quote">"Our mission is simple — every student in Jodhpur deserves access to quality stationery at an honest price."</p>
       </div>
@@ -482,13 +508,13 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Geeta Stationery" class="footer-logo"/>
-        <p>Jodhpur's most trusted stationery store. Quality products for students, teachers, artists and offices.</p>
+        <img src="images/logo-new.png" alt="Geeta Stationery" class="footer-logo"/>
+        <p>Jodhpur's most trusted stationery store — books, supplies, print &amp; copy services. Write. Create. Inspire.</p>
         <div class="social-links">
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -508,18 +534,19 @@
         <a href="pages/shop.html?cat=books">School Books</a>
         <a href="pages/shop.html?cat=notebooks">Notebooks</a>
         <a href="pages/shop.html?cat=art">Art Supplies</a>
-        <a href="pages/shop.html?cat=office">Office Supplies</a>
+        <a href="pages/shop.html?cat=toys">Toys &amp; Games</a>
+        <a href="pages/shop.html?cat=shoes">School Shoes</a>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
         <p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan, India</p>
         <p><i class="fas fa-phone"></i> +91 75685 21210</p>
         <p><i class="fab fa-whatsapp"></i> +91 75685 21210</p>
-        <p><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 8:00 PM</p>
+        <p><i class="fas fa-clock"></i> Mon–Sat: 9AM – 8PM</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Geeta Stationery, Jodhpur. All Rights Reserved.</p>
+      <p>© 2025 Geeta Stationery, Jodhpur. All Rights Reserved. | Write. Create. Inspire.</p>
     </div>
   </div>
 </footer>
@@ -529,7 +556,37 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ===== AI CHATBOT ===== -->
+<button class="ai-chat-fab" onclick="toggleAIChat()" title="Ask our AI Assistant">
+  <i class="fas fa-robot"></i>
+</button>
+<div class="ai-chat-window" id="aiChatWindow">
+  <div class="ai-chat-header">
+    <div class="ai-avatar">🤖</div>
+    <div class="ai-chat-header-info">
+      <h4>Geeta AI Assistant</h4>
+      <p><span class="ai-online-dot"></span> Online — Ask me anything!</p>
+    </div>
+    <button class="ai-close-btn" onclick="toggleAIChat()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="ai-chat-msgs" id="aiMsgs">
+    <div class="ai-msg bot">Hi! 👋 I'm Geeta's AI assistant. I can help you find the right stationery, books for your school, or any product!</div>
+    <div class="ai-msg bot">What are you looking for today?</div>
+  </div>
+  <div class="ai-quick-replies" id="quickReplies">
+    <button class="ai-quick-btn" onclick="quickReply('School books')">📚 School books</button>
+    <button class="ai-quick-btn" onclick="quickReply('Art supplies')">🎨 Art supplies</button>
+    <button class="ai-quick-btn" onclick="quickReply('Print services')">🖨️ Print services</button>
+    <button class="ai-quick-btn" onclick="quickReply('Gifts & toys')">🎁 Gifts & toys</button>
+  </div>
+  <div class="ai-chat-input">
+    <input type="text" placeholder="Type your message..." id="aiInput" onkeydown="if(event.key==='Enter')sendAIMsg()"/>
+    <button class="ai-send-btn" onclick="sendAIMsg()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

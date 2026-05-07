@@ -1,143 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us – Geeta Stationery Jodhpur</title>
-  <link rel="icon" href="../images/logo.png" type="image/png"/>
+  <link rel="icon" href="../images/logo-new.png" type="image/png"/>
   <link rel="stylesheet" href="../css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-
 <header class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Geeta Stationery"/></a>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo-new.png" alt="Geeta Stationery"/></a>
     <nav class="nav-links" id="navLinks">
-      <a href="../index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="shop.html?cat=all">Categories</a><a href="shop.html?sort=new">New Arrivals</a><a href="shop.html?sort=popular">Best Sellers</a><a href="print-services.html">Print &amp; Copy</a><a href="about.html" class="active">About Us</a><a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
-      <a href="shop.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+      <button class="nav-icon-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+      <a href="shop.html" class="nav-icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search products..." id="searchInput"/>
-    <button onclick="doSearch()"><i class="fas fa-search"></i></button>
-  </div>
+  <div class="search-bar" id="searchBar"><input type="text" placeholder="Search products..." id="searchInput"/><button onclick="doSearch()"><i class="fas fa-search"></i></button></div>
 </header>
 
-<div class="page-hero">
-  <div class="container">
-    <h1>About Geeta Stationery</h1>
-    <p>Write. Learn. Grow. — Serving Jodhpur with quality stationery.</p>
-  </div>
-</div>
+<div class="page-hero"><div class="container"><h1>About Geeta Stationery</h1><p>Write. Create. Inspire. — Serving Jodhpur with quality stationery.</p></div></div>
 
-<!-- STORY -->
 <section class="about-story">
   <div class="container">
     <div class="about-grid">
-      <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=800&q=80" alt="Geeta Stationery Store"/>
-      </div>
+      <div class="about-img"><img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=800&q=80" alt="Geeta Stationery Store"/></div>
       <div class="about-content">
-        <p class="section-tag">Our Story</p>
+        <span class="section-tag">Our Story</span>
         <h2>Jodhpur's Trusted Stationery Partner</h2>
-        <p>Geeta Stationery has been serving the students, teachers, and offices of Jodhpur with quality stationery and school supplies for years. What started as a small neighbourhood shop has grown into one of Jodhpur's most trusted destinations for everything from school books to art supplies.</p>
-        <p>We believe every student deserves access to the best quality stationery at affordable prices. Our mission is simple — to be the one-stop shop that makes school and office supplies easy, accessible, and affordable for everyone.</p>
-        <p>From Class 1 NCERT books to professional art supplies, we carry thousands of products under one roof. Whether you're a student, teacher, artist, or office professional, Geeta Stationery has everything you need.</p>
+        <p>Geeta Stationery has been serving the students, teachers, and offices of Jodhpur with quality stationery and school supplies for over 10 years. What started as a small neighbourhood shop has grown into one of Jodhpur's most trusted destinations for everything from school books to art supplies.</p>
+        <p>We believe every student deserves access to the best quality stationery at affordable prices. Our mission is simple — to be the one-stop shop that makes school and office supplies easy, accessible, and affordable for everyone in Jodhpur.</p>
+        <p>From Class 1 NCERT books to professional art supplies, toys, gifts, shoes, and print services — we carry thousands of products under one roof.</p>
         <div class="stat-row">
-          <div class="stat-item">
-            <h3>10+</h3>
-            <p>Years Serving Jodhpur</p>
-          </div>
-          <div class="stat-item">
-            <h3>5000+</h3>
-            <p>Happy Customers</p>
-          </div>
-          <div class="stat-item">
-            <h3>1000+</h3>
-            <p>Products in Stock</p>
-          </div>
+          <div class="stat-item"><h3>10+</h3><p>Years Serving Jodhpur</p></div>
+          <div class="stat-item"><h3>5000+</h3><p>Happy Customers</p></div>
+          <div class="stat-item"><h3>1000+</h3><p>Products in Stock</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="section trust-section">
+<section class="section why-section">
   <div class="container">
-    <div class="section-head">
-      <p class="section-tag">Our Values</p>
-      <h2>What We Stand For</h2>
+    <div class="section-head center"><span class="section-tag">Our Values</span><h2>What We Stand For</h2></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><i class="fas fa-heart"></i></div><h3>Community First</h3><p>We are a proud local Jodhpur business. Every purchase supports our family and the local community.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fas fa-medal"></i></div><h3>Quality Guaranteed</h3><p>We stock only genuine, quality-tested products from trusted brands like Classmate, Camlin, Faber Castell and more.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fas fa-rupee-sign"></i></div><h3>Honest Pricing</h3><p>No hidden markups. We offer the best prices in Jodhpur so that every student and family can afford quality.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fas fa-smile"></i></div><h3>Customer Happiness</h3><p>We go out of our way to help every customer find exactly what they need. Our team is always happy to assist.</p></div>
     </div>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-heart"></i></div>
-        <h3>Community First</h3>
-        <p>We are a local Jodhpur business and proud of it. Every sale helps support our family and the local community.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-medal"></i></div>
-        <h3>Quality Guaranteed</h3>
-        <p>We only stock genuine, quality-tested products from trusted brands like Classmate, Camlin, Faber Castell, and more.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-rupee-sign"></i></div>
-        <h3>Honest Pricing</h3>
-        <p>No hidden markups. We offer the best prices in Jodhpur so that every student and family can afford quality.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon"><i class="fas fa-smile"></i></div>
-        <h3>Customer Happiness</h3>
-        <p>We go out of our way to help every customer find exactly what they need. Our team is always happy to assist.</p>
+  </div>
+</section>
+
+<section class="owner-section">
+  <div class="owner-inner">
+    <span class="section-tag">The Person Behind It All</span>
+    <h2>Proudly Owned &amp; Operated</h2>
+    <p class="owner-subtitle">A trusted name in Jodhpur's stationery business — built on honesty, quality, and a deep love for education.</p>
+    <div style="display:flex;justify-content:center;">
+      <div class="owner-card">
+        <div class="owner-photo-frame"><img src="../images/owner.jpg" alt="Store Owner – Geeta Stationery"/></div>
+        <p class="owner-name">Geeta Stationery</p>
+        <p class="owner-title">Founder &amp; Owner · Jodhpur</p>
+        <div class="owner-divider"></div>
+        <p class="owner-quote">"Our mission is simple — every student in Jodhpur deserves access to quality stationery at an honest price."</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80')">
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
-      <h2>Visit Our Store in Jodhpur</h2>
-      <p>Come visit us or order on WhatsApp for quick home delivery across Jodhpur!</p>
-      <a href="https://wa.me/917568521210" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-    </div>
-  </div>
-</section>
+<section class="cta-section"><div class="container"><div class="cta-inner"><h2>Visit Our Store in Jodhpur</h2><p>Come visit us or order on WhatsApp for any queries and book lists!</p><a href="https://wa.me/917568521210" class="btn-whatsapp" target="_blank" style="display:inline-flex;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></div></div></section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../images/logo.png" alt="Geeta Stationery" class="footer-logo"/>
-        <p>Jodhpur's most trusted stationery store.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="https://wa.me/917568521210"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="footer-col"><h4>Quick Links</h4><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="print-services.html">Print &amp; Copy</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h4>Categories</h4><a href="shop.html?cat=books">School Books</a><a href="shop.html?cat=notebooks">Notebooks</a><a href="shop.html?cat=art">Art Supplies</a></div>
-      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p><p><i class="fas fa-phone"></i> +91 75685 21210</p><p><i class="fas fa-clock"></i> Mon–Sat: 9AM – 8PM</p></div>
-    </div>
-    <div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div>
-  </div>
-</footer>
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><img src="../images/logo-new.png" alt="Geeta Stationery" class="footer-logo"/><p>Jodhpur's most trusted stationery store. Write. Create. Inspire.</p><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="https://wa.me/917568521210" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div>
+  <div class="footer-col"><h4>Quick Links</h4><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="print-services.html">Print &amp; Copy</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="footer-col"><h4>Categories</h4><a href="shop.html?cat=books">School Books</a><a href="shop.html?cat=notebooks">Notebooks</a><a href="shop.html?cat=art">Art Supplies</a><a href="shop.html?cat=toys">Toys &amp; Games</a></div>
+  <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p><p><i class="fas fa-phone"></i> +91 75685 21210</p><p><i class="fas fa-clock"></i> Mon–Sat: 9AM–8PM</p></div>
+</div><div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div></div></footer>
 <a href="https://wa.me/917568521210" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-<script src="../js/products.js"></script>
-<script src="../js/main.js"></script>
+<button class="ai-chat-fab" onclick="toggleAIChat()"><i class="fas fa-robot"></i></button>
+<div class="ai-chat-window" id="aiChatWindow"><div class="ai-chat-header"><div class="ai-avatar">🤖</div><div class="ai-chat-header-info"><h4>Geeta AI Assistant</h4><p><span class="ai-online-dot"></span> Online</p></div><button class="ai-close-btn" onclick="toggleAIChat()"><i class="fas fa-times"></i></button></div><div class="ai-chat-msgs" id="aiMsgs"><div class="ai-msg bot">Hi! 👋 How can I help you today?</div></div><div class="ai-quick-replies" id="quickReplies"><button class="ai-quick-btn" onclick="quickReply('School books')">📚 Books</button><button class="ai-quick-btn" onclick="quickReply('Store location')">📍 Location</button></div><div class="ai-chat-input"><input type="text" placeholder="Ask me anything..." id="aiInput" onkeydown="if(event.key==='Enter')sendAIMsg()"/><button class="ai-send-btn" onclick="sendAIMsg()"><i class="fas fa-paper-plane"></i></button></div></div>
+<script src="../js/products.js"></script><script src="../js/main.js"></script><script src="../js/chatbot.js"></script>
 </body>
 </html>

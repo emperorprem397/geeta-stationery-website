@@ -1,88 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Print & Photocopy Services – Geeta Stationery Jodhpur</title>
-  <meta name="description" content="Photocopy, color printing, black & white print, passport photos, lamination and more at Geeta Stationery, Jodhpur."/>
-  <link rel="icon" href="../images/logo.png" type="image/png"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Print & Copy Services – Geeta Stationery Jodhpur</title>
+  <meta name="description" content="Photocopy, color printing, passport photos, lamination, scanning at Geeta Stationery, Jodhpur."/>
+  <link rel="icon" href="../images/logo-new.png" type="image/png"/>
   <link rel="stylesheet" href="../css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    .print-hero { background: linear-gradient(135deg, #0f1e3a 0%, #1A2B4A 60%, #1e3a6e 100%); padding: 130px 0 70px; text-align: center; color: #fff; margin-top: 76px; position: relative; overflow: hidden; }
-    .print-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1400&q=60') center/cover; opacity: 0.07; }
-    .print-hero-inner { position: relative; z-index: 1; }
-    .print-hero h1 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 14px; }
-    .print-hero p { color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 560px; margin: 0 auto 32px; line-height: 1.7; }
-    .print-hero-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .hero-badge { background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.4); color: var(--gold-light); padding: 6px 16px; border-radius: 3px; font-size: 0.72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
-    .print-services-section { background: var(--off-white); padding: 90px 0; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 60px; }
-    .service-card { background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px; border: 1px solid var(--border); transition: all 0.3s; text-align: center; position: relative; overflow: hidden; }
-    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy), var(--gold)); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
-    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: transparent; }
-    .service-card:hover::before { transform: scaleX(1); }
-    .service-icon { width: 70px; height: 70px; border-radius: 16px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.7rem; color: var(--gold-light); }
-    .service-card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 10px; }
-    .service-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
-    .price-badge { display: inline-block; background: var(--off-white); border: 1px solid var(--border); color: var(--navy); font-size: 0.78rem; font-weight: 700; padding: 5px 14px; border-radius: 3px; }
-    .how-it-works { background: var(--white); padding: 90px 0; }
-    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
-    .steps-grid::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--border), var(--gold), var(--border)); z-index: 0; }
-    .step-card { text-align: center; position: relative; z-index: 1; }
-    .step-num { width: 80px; height: 80px; border-radius: 50%; background: var(--navy); color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 3px solid var(--gold); }
-    .step-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
-    .step-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.65; }
-    .send-order-section { background: var(--navy); padding: 90px 0; }
-    .send-order-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .send-order-info h2 { color: var(--white); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px; }
-    .send-order-info p { color: rgba(255,255,255,0.6); font-size: 0.92rem; line-height: 1.75; margin-bottom: 12px; }
-    .send-steps { margin: 28px 0; }
-    .send-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
-    .send-step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .send-step-text strong { display: block; color: var(--white); font-size: 0.9rem; margin-bottom: 3px; }
-    .send-step-text p { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin: 0; }
-    .order-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(200,150,12,0.25); border-radius: var(--radius-lg); padding: 40px; text-align: center; }
-    .whatsapp-big-btn { display: flex; flex-direction: column; align-items: center; gap: 8px; background: #25D366; color: var(--white); padding: 24px 40px; border-radius: var(--radius); font-weight: 700; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 8px 32px rgba(37,211,102,0.35); width: 100%; text-align: center; }
-    .whatsapp-big-btn i { font-size: 2.5rem; }
-    .whatsapp-big-btn:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
-    .whatsapp-big-btn span { font-size: 0.78rem; font-weight: 400; opacity: 0.85; }
-    .order-card h3 { color: var(--white); font-size: 1.2rem; margin-bottom: 8px; }
-    .order-card p { color: rgba(255,255,255,0.55); font-size: 0.82rem; margin-bottom: 24px; line-height: 1.6; }
-    .divider-or { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: rgba(255,255,255,0.3); font-size: 0.78rem; }
-    .divider-or span { flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
-    .walk-in-note { background: rgba(255,255,255,0.04); border-radius: var(--radius); padding: 16px 20px; }
-    .walk-in-note p { color: rgba(255,255,255,0.55); font-size: 0.82rem; line-height: 1.65; margin: 0; }
-    .walk-in-note strong { color: var(--gold-light); }
-    .pricing-section { background: var(--off-white); padding: 60px 0 90px; }
-    .pricing-table { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); }
-    .pricing-table table { width: 100%; border-collapse: collapse; }
-    .pricing-table th { background: var(--navy); color: var(--white); padding: 16px 20px; text-align: left; font-family: 'Inter'; font-weight: 600; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; }
-    .pricing-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-size: 0.86rem; color: var(--text); }
-    .pricing-table tr:last-child td { border-bottom: none; }
-    .pricing-table tr:nth-child(even) td { background: var(--off-white); }
-    .price-tag { font-weight: 700; color: var(--navy); }
-    .avail-yes { color: #16a34a; font-weight: 600; }
-    @media(max-width:900px){ .services-grid{grid-template-columns:repeat(2,1fr);} .steps-grid{grid-template-columns:repeat(2,1fr);} .steps-grid::before{display:none;} .send-order-grid{grid-template-columns:1fr;} }
-    @media(max-width:600px){ .services-grid{grid-template-columns:1fr;} .steps-grid{grid-template-columns:1fr 1fr;} }
-  </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Geeta Stationery"/></a>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo-new.png" alt="Geeta Stationery"/></a>
     <nav class="nav-links" id="navLinks">
       <a href="../index.html">Home</a>
       <a href="shop.html">Shop</a>
+      <a href="shop.html?cat=all">Categories</a>
+      <a href="shop.html?sort=new">New Arrivals</a>
+      <a href="shop.html?sort=popular">Best Sellers</a>
       <a href="print-services.html" class="active">Print &amp; Copy</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
-      <a href="shop.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+      <button class="nav-icon-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+      <a href="shop.html" class="nav-icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -92,10 +37,11 @@
   </div>
 </header>
 
+<!-- HERO -->
 <div class="print-hero">
   <div class="print-hero-inner container">
     <h1>Print &amp; Copy Services</h1>
-    <p>Photocopy · Color Print · Passport Photos · Lamination · Scanning — everything available at Geeta Stationery, Jodhpur.</p>
+    <p>Photocopy · Color Print · Passport Photos · Lamination · Scanning — everything done on the spot at Geeta Stationery, Jodhpur.</p>
     <div class="print-hero-badges">
       <span class="hero-badge">📄 Photocopy / Xerox</span>
       <span class="hero-badge">🖨️ Color Printing</span>
@@ -107,9 +53,10 @@
   </div>
 </div>
 
+<!-- SERVICES -->
 <section class="print-services-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="section-tag">What We Offer</span>
       <h2>All Print &amp; Copy Services</h2>
     </div>
@@ -117,7 +64,7 @@
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-copy"></i></div>
         <h3>Photocopy / Xerox</h3>
-        <p>Fast and clear B&W photocopying for documents, forms, books, and files of any size — single or bulk copies.</p>
+        <p>Fast and clear B&amp;W photocopying for documents, forms, books, and files of any size — single or bulk copies.</p>
         <span class="price-badge">Starting ₹1 / page</span>
       </div>
       <div class="service-card">
@@ -129,7 +76,7 @@
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-file-alt"></i></div>
         <h3>B&amp;W Printing</h3>
-        <p>High-quality black & white printing for documents, notes, forms, and official papers.</p>
+        <p>High-quality black &amp; white printing for documents, notes, forms, and official papers.</p>
         <span class="price-badge">Starting ₹2 / page</span>
       </div>
       <div class="service-card">
@@ -147,16 +94,17 @@
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-file-upload"></i></div>
         <h3>Scanning</h3>
-        <p>Scan documents, photos & certificates as PDF or image. Results shared on WhatsApp or email instantly.</p>
+        <p>Scan documents, photos &amp; certificates as PDF or image. Results shared on WhatsApp instantly.</p>
         <span class="price-badge">Starting ₹5 / page</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="how-it-works">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="section-tag">Simple Process</span>
       <h2>How to Get Your Print Done</h2>
     </div>
@@ -164,7 +112,7 @@
       <div class="step-card">
         <div class="step-num">1</div>
         <h3>Send on WhatsApp</h3>
-        <p>Send your file, photo, or document to our WhatsApp number with your print requirements.</p>
+        <p>Send your file, photo, or document to our WhatsApp with your print requirements.</p>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
@@ -174,7 +122,7 @@
       <div class="step-card">
         <div class="step-num">3</div>
         <h3>We Print It</h3>
-        <p>Your document is printed exactly as requested — color, B&W, passport photo, or laminated.</p>
+        <p>Your document is printed exactly as requested — color, B&amp;W, passport photo, or laminated.</p>
       </div>
       <div class="step-card">
         <div class="step-num">4</div>
@@ -185,13 +133,14 @@
   </div>
 </section>
 
+<!-- SEND ORDER SECTION -->
 <section class="send-order-section">
   <div class="container">
     <div class="send-order-grid">
       <div class="send-order-info">
-        <span class="section-tag" style="color:var(--gold-light);">Pre-Order via WhatsApp</span>
+        <span class="section-tag" style="color:rgba(255,180,200,0.8);">Pre-Order via WhatsApp</span>
         <h2>Send Your File Before You Visit</h2>
-        <p>Save time! Send your document or photo on WhatsApp before coming to the store. By the time you arrive, your print may already be ready.</p>
+        <p>Save time! Send your document or photo on WhatsApp before visiting. By the time you arrive, your print may already be ready.</p>
         <div class="send-steps">
           <div class="send-step">
             <div class="send-step-num">1</div>
@@ -215,13 +164,16 @@
             </div>
           </div>
         </div>
-        <p style="color:rgba(255,255,255,0.35);font-size:0.8rem;"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:6px;"></i>No home delivery available. Store collection only.</p>
+        <p style="color:rgba(255,255,255,0.35);font-size:0.8rem;font-weight:600;">
+          <i class="fas fa-info-circle" style="color:var(--pink);margin-right:6px;"></i>No home delivery. Store collection only.
+        </p>
       </div>
       <div>
         <div class="order-card">
           <h3>Send Your File Now</h3>
-          <p>Tap below — it opens WhatsApp with a pre-filled message. Just attach your file and send!</p>
-          <a href="https://wa.me/917568521210?text=Hi!%20I%20want%20to%20place%20a%20print%20order%20at%20Geeta%20Stationery.%0A%0AService%3A%20(Color%20Print%20%2F%20Xerox%20%2F%20Passport%20Photo%20%2F%20Lamination)%0ACopies%3A%20%0APaper%20size%3A%20A4%20%2F%20A3%0AColor%20or%20B%26W%3A%20%0A%0AFile%20attached%20below%20%E2%AC%87%EF%B8%8F" class="whatsapp-big-btn" target="_blank">
+          <p>Tap below — opens WhatsApp with a pre-filled message. Just attach your file and send!</p>
+          <a href="https://wa.me/917568521210?text=Hi!%20I%20want%20to%20place%20a%20print%20order.%0A%0AService%3A%20(Color%20Print%20%2F%20Xerox%20%2F%20Passport%20Photo%20%2F%20Lamination)%0ACopies%3A%20%0APaper%20size%3A%20A4%20%2F%20A3%0AColor%20or%20B%26W%3A%20%0A%0AFile%20attached%20below%20%E2%AC%87%EF%B8%8F"
+            class="whatsapp-big-btn" target="_blank">
             <i class="fab fa-whatsapp"></i>
             Send File on WhatsApp
             <span>Opens pre-filled message — just attach your file &amp; send</span>
@@ -238,9 +190,10 @@
   </div>
 </section>
 
+<!-- PRICING TABLE -->
 <section class="pricing-section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center">
       <span class="section-tag">Pricing</span>
       <h2>Service Rates at a Glance</h2>
     </div>
@@ -250,9 +203,9 @@
           <tr><th>Service</th><th>Details</th><th>Price</th><th>Status</th></tr>
         </thead>
         <tbody>
-          <tr><td>B&W Photocopy (A4)</td><td>Single sided per page</td><td class="price-tag">₹1 / page</td><td class="avail-yes">✓ Available</td></tr>
+          <tr><td>B&amp;W Photocopy (A4)</td><td>Single sided per page</td><td class="price-tag">₹1 / page</td><td class="avail-yes">✓ Available</td></tr>
           <tr><td>Color Print (A4)</td><td>Single sided per page</td><td class="price-tag">₹5 / page</td><td class="avail-yes">✓ Available</td></tr>
-          <tr><td>B&W Print A3</td><td>Larger format</td><td class="price-tag">₹3 / page</td><td class="avail-yes">✓ Available</td></tr>
+          <tr><td>B&amp;W Print A3</td><td>Larger format</td><td class="price-tag">₹3 / page</td><td class="avail-yes">✓ Available</td></tr>
           <tr><td>Color Print A3</td><td>Posters &amp; charts</td><td class="price-tag">₹10 / page</td><td class="avail-yes">✓ Available</td></tr>
           <tr><td>Passport Size Photos</td><td>4 photos printed instantly</td><td class="price-tag">₹20</td><td class="avail-yes">✓ Available</td></tr>
           <tr><td>Lamination (A4)</td><td>Gloss or matte</td><td class="price-tag">₹10 / sheet</td><td class="avail-yes">✓ Available</td></tr>
@@ -265,12 +218,13 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="../images/logo.png" alt="Geeta Stationery" class="footer-logo"/>
-        <p>Jodhpur's most trusted stationery store — books, supplies, print &amp; copy services.</p>
+        <img src="../images/logo-new.png" alt="Geeta Stationery" class="footer-logo"/>
+        <p>Jodhpur's most trusted stationery store — books, supplies, print &amp; copy services. Write. Create. Inspire.</p>
         <div class="social-links">
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -291,6 +245,7 @@
         <a href="print-services.html">Color Printing</a>
         <a href="print-services.html">Passport Photos</a>
         <a href="print-services.html">Lamination</a>
+        <a href="print-services.html">Scanning</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -302,8 +257,38 @@
     <div class="footer-bottom"><p>© 2025 Geeta Stationery. All Rights Reserved.</p></div>
   </div>
 </footer>
+
 <a href="https://wa.me/917568521210" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- AI CHATBOT -->
+<button class="ai-chat-fab" onclick="toggleAIChat()" title="Ask our AI Assistant">
+  <i class="fas fa-robot"></i>
+</button>
+<div class="ai-chat-window" id="aiChatWindow">
+  <div class="ai-chat-header">
+    <div class="ai-avatar">🤖</div>
+    <div class="ai-chat-header-info">
+      <h4>Geeta AI Assistant</h4>
+      <p><span class="ai-online-dot"></span> Online — Ask me anything!</p>
+    </div>
+    <button class="ai-close-btn" onclick="toggleAIChat()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="ai-chat-msgs" id="aiMsgs">
+    <div class="ai-msg bot">Hi! 👋 Need help with print services? Ask me!</div>
+  </div>
+  <div class="ai-quick-replies" id="quickReplies">
+    <button class="ai-quick-btn" onclick="quickReply('Print services')">🖨️ Services</button>
+    <button class="ai-quick-btn" onclick="quickReply('Price range')">💰 Prices</button>
+    <button class="ai-quick-btn" onclick="quickReply('Send file on WhatsApp')">📤 Send File</button>
+  </div>
+  <div class="ai-chat-input">
+    <input type="text" placeholder="Ask me anything..." id="aiInput" onkeydown="if(event.key==='Enter')sendAIMsg()"/>
+    <button class="ai-send-btn" onclick="sendAIMsg()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
 <script src="../js/products.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/chatbot.js"></script>
 </body>
 </html>
